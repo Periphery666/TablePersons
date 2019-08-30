@@ -1,0 +1,29 @@
+{
+  "name": "tablepersons_2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "assert": "^2.0.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "js-yaml": "^3.13.1",
+    "json2csv": "^4.5.2",
+    "xml-js": "^1.6.11",
+    "yaml-to-json": "^0.3.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "test": "mocha tests/jstests/testsServer.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table Persons</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="person-wrapper">
+        <div class="person-wrapper__table">
+            <h2 class="person-wrapper__header">Table Persons</h2>
+
+            <table class="table table-condensed table-striped table-bordered" id="personForm">
+                <thead><tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Age</th></tr></thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="person-wrapper__add">
+            <h3>Add person</h3>
+            <form name="userForm" id="userFormAdd">
+                <input type="hidden" name="id" value="0" />
+                <div class="form-group">
+                    <label for="add-index">Index:</label>
+                    <input id="add-index" class="form-control" name="index" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input id="firstName" class="form-control" name="firstName" />
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input id="lastName" class="form-control" name="lastName" />
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input id="age" class="form-control" name="age" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                </div>
+            </form>
+
+            <div class="panel-btn">
+                <button id="addToStart" class="btn">Add to start</button>
+                <button id="addToEnd" class="btn">Add to end</button>
+                <button id="addByIndex" class="btn">Add by index</button>
+            </div>
+        </div>
+
+        <div class="person-wrapper__delete">
+            <h3>Delete person</h3>
+            <form name="userForm" id="userFormDelete">
+                <div class="form-group">
+                    <label for="delete-index">Index:</label>
+                    <input id="delete-index" class="form-control" name="index" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                </div>
+            </form>
+
+            <div class="panel-btn">
+                <button id="deleteToStart" class="btn">Delete with start</button>
+                <button id="deleteToEnd" class="btn">Delete with end</button>
+                <button id="deleteByIndex" class="btn">Delete by index</button>
+            </div>
+        </div>
+
+        <div class="person-wrapper__save">
+            <div class="person-wrapper__saveTo">
+                <h3>Save table persons to client</h3>
+                <div class="panel-btn">
+                    <button id="saveOnClientToCSV" class="btn">Save to csv</button>
+                    <button id="saveOnClientToYAML" class="btn">Save to yaml</button>
+                    <button id="saveOnClientToXML" class="btn">Save to xml</button>
+                    <button id="saveOnClientToJSON" class="btn">Save to json</button>
+                </div>
+            </div>
+            <div class="person-wrapper__saveTo">
+                <h3>Save table persons to server</h3>
+                <div class="panel-btn">
+                    <button id="saveOnServerToCSV" class="btn">Save to csv</button>
+                    <button id="saveOnServerToYAML" class="btn">Save to yaml</button>
+                    <button id="saveOnServerToXML" class="btn">Save to xml</button>
+                    <button id="saveOnServerToJSON" class="btn ">Save to json</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/modelController.js"></script>
+    <script src="./js/model.js"></script>
+</body>
+</html>
